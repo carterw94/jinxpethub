@@ -3,7 +3,7 @@ import { notFound } from "next/navigation"
 import Link from "next/link"
 import { animals, getAnimal, getSubcategory } from "@/data/animals"
 import LinkCard from "@/components/LinkCard"
-import AnimalPhoto from "@/components/AnimalPhoto"
+import Image from "next/image"
 
 interface Props {
   params: Promise<{ animal: string; subcategory: string }>
@@ -36,23 +36,14 @@ export default async function SubcategoryPage({ params }: Props) {
     <>
       {/* ── Hero ─────────────────────────────────────────── */}
       <section
-        className="py-16 text-center relative overflow-hidden"
+        className="py-16 text-center"
         style={{ backgroundColor: animal.color + "22" }}
       >
-        {/* Breed photo as background */}
-        {sub.image && (
-          <AnimalPhoto
-            src={sub.image}
-            alt={sub.name}
-            className="object-cover opacity-15"
-            priority
-          />
-        )}
-        <div className="relative z-10 text-5xl mb-3 select-none" aria-hidden="true">{animal.emoji}</div>
-        <h1 className="relative z-10 font-display text-4xl sm:text-5xl font-semibold text-ink mb-2">
+        <div className="text-5xl mb-3 select-none" aria-hidden="true">{animal.emoji}</div>
+        <h1 className="font-display text-4xl sm:text-5xl font-semibold text-ink mb-2">
           {sub.name}
         </h1>
-        <nav className="relative z-10 flex items-center justify-center gap-1.5 text-xs font-semibold text-muted flex-wrap mt-3">
+        <nav className="flex items-center justify-center gap-1.5 text-xs font-semibold text-muted flex-wrap mt-3">
           <Link href="/animals" className="hover:text-ink transition-colors">Animals</Link>
           <span>/</span>
           <Link href={`/animals/${animal.slug}`} className="hover:text-ink transition-colors">
@@ -149,6 +140,20 @@ export default async function SubcategoryPage({ params }: Props) {
                         </li>
                       ))}
                   </ul>
+                </div>
+              )}
+
+              {/* Photo(s) */}
+              {sub.image && (
+                <div className="space-y-3">
+                  <div className="relative h-48 rounded-2xl overflow-hidden">
+                    <Image
+                      src={sub.image}
+                      alt={sub.name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
                 </div>
               )}
             </div>
