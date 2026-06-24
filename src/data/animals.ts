@@ -14,7 +14,7 @@ export const animals: Animal[] = [
       "Cats were first domesticated around 10,000 years ago in the Near East, likely drawn to human settlements by rodents. Ancient Egyptians revered cats and even worshipped the cat goddess Bastet. Over millennia, selective breeding gave rise to the hundreds of distinct breeds we know today, each with unique coats, builds, and temperaments.",
     care: "Cats generally need daily feeding, fresh water, a clean litter box, regular veterinary check-ups, enrichment toys, and plenty of affection. Indoor cats live significantly longer on average.",
     image: "/images/animals/cats.jpg",
-    color: "#D4846A",
+    color: "#FF6B6B",
     links: [
       {
         title: "Cornell Feline Health Center",
@@ -203,7 +203,7 @@ export const animals: Animal[] = [
       "Hamsters were first discovered by Western science in 1839 when British zoologist George Robert Waterhouse described a specimen collected in Syria. The Syrian hamster wasn't domesticated until 1930, when zoologist Israel Aharoni captured a mother and her litter in the Syrian desert. Nearly all pet Syrian hamsters today descend from that single wild litter.",
     care: "Hamsters are nocturnal and need large cages (40+ inch floor space recommended), a wheel at least 10–12 inches in diameter, deep bedding for burrowing, and a varied diet of hamster pellets, fresh vegetables, and occasional protein.",
     image: "/images/animals/hamsters.jpg",
-    color: "#E8C07D",
+    color: "#FFAB40",
     links: [
       {
         title: "Hamster Society Singapore — Care Guides",
@@ -322,7 +322,7 @@ export const animals: Animal[] = [
       "Guinea pigs are native to the Andes Mountains of South America, where they were first domesticated by indigenous peoples around 5000 BCE as a food source. Spanish explorers brought them to Europe in the 16th century, where they quickly became fashionable exotic pets among the upper class. Today they are among the most popular small pets globally.",
     care: "Guinea pigs need large enclosures (minimum 7.5 sq ft for one, 10+ for two), unlimited grass hay (their primary diet), fresh vegetables daily, Vitamin C supplementation, and social companionship — they should never be housed alone.",
     image: "/images/animals/guinea-pigs.jpg",
-    color: "#A8C5A0",
+    color: "#4DD9AC",
     links: [
       {
         title: "Guinea Pig Cages — Care Guide",
@@ -441,7 +441,7 @@ export const animals: Animal[] = [
       "European rabbits (Oryctolagus cuniculus) were first domesticated by French monks around 600 CE, who began keeping wild rabbits in enclosures. Selective breeding for different coat colors and body shapes began in earnest in the 19th century, and today there are over 50 recognized domestic rabbit breeds ranging from the 2-pound Netherland Dwarf to the 20-pound Flemish Giant.",
     care: "Rabbits need large indoor housing (a minimum 4×4 ft pen, ideally larger), unlimited grass hay, fresh leafy greens, limited pellets, regular grooming, and ideally a bonded companion rabbit. They should be spayed/neutered for health and behavioral benefits.",
     image: "/images/animals/rabbits.jpg",
-    color: "#C9B8D4",
+    color: "#B39DDB",
     links: [
       {
         title: "House Rabbit Society",

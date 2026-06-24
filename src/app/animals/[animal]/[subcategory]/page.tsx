@@ -34,117 +34,97 @@ export default async function SubcategoryPage({ params }: Props) {
   return (
     <>
       {/* ── Hero ─────────────────────────────────────────── */}
-      <section className="bg-ink relative overflow-hidden">
-        <div
-          className="sci-name-ghost absolute -bottom-2 right-0 text-[clamp(3rem,9vw,7rem)]"
-          aria-hidden="true"
-        >
+      <section
+        className="py-16 text-center"
+        style={{ backgroundColor: animal.color + "22" }}
+      >
+        <div className="text-5xl mb-3 select-none" aria-hidden="true">{animal.emoji}</div>
+        <h1 className="font-display text-4xl sm:text-5xl font-semibold text-ink mb-2">
           {sub.name}
-        </div>
-        <div className="relative max-w-6xl mx-auto px-5 sm:px-8 py-18">
-          <nav className="font-mono text-[9px] tracking-[0.18em] uppercase text-linen/30 mb-8 flex items-center gap-2 flex-wrap">
-            <Link href="/animals" className="hover:text-gold/70 transition-colors">Animals</Link>
-            <span>/</span>
-            <Link href={`/animals/${animal.slug}`} className="hover:text-gold/70 transition-colors">
-              {animal.name}
-            </Link>
-            <span>/</span>
-            <span className="text-linen/50">{sub.name}</span>
-          </nav>
-          <h1 className="font-display text-[clamp(2.5rem,7vw,5rem)] font-light italic text-linen leading-none mb-3">
-            {sub.name}
-          </h1>
-          <p className="font-mono text-xs text-gold/40 tracking-wide italic">
-            {animal.name} · {animal.scientificName}
-          </p>
-        </div>
+        </h1>
+        <nav className="flex items-center justify-center gap-1.5 text-xs font-semibold text-muted flex-wrap mt-3">
+          <Link href="/animals" className="hover:text-ink transition-colors">Animals</Link>
+          <span>/</span>
+          <Link href={`/animals/${animal.slug}`} className="hover:text-ink transition-colors">
+            {animal.name}
+          </Link>
+          <span>/</span>
+          <span className="text-ink">{sub.name}</span>
+        </nav>
       </section>
 
-      <div className="h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
-
       {/* ── Content ──────────────────────────────────────── */}
-      <div className="max-w-6xl mx-auto px-5 sm:px-8 py-14">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          {/* Main */}
-          <div className="lg:col-span-2 space-y-10">
-
+      <div className="max-w-5xl mx-auto px-5 sm:px-8 py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+          <div className="lg:col-span-2 space-y-8">
             <section>
-              <p className="font-mono text-[9px] text-gold/70 tracking-[0.2em] uppercase mb-4">About</p>
-              <p className="text-ink/75 leading-relaxed text-[15px]">{sub.description}</p>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-3">About</h2>
+              <p className="text-muted leading-relaxed">{sub.description}</p>
             </section>
 
-            <div className="h-px bg-cotton" />
-
             <section>
-              <p className="font-mono text-[9px] text-gold/70 tracking-[0.2em] uppercase mb-4">History</p>
-              <p className="text-ink/75 leading-relaxed text-[15px]">{sub.history}</p>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-3">History</h2>
+              <p className="text-muted leading-relaxed">{sub.history}</p>
             </section>
 
             {(sub.temperament || sub.care) && (
-              <>
-                <div className="h-px bg-cotton" />
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {sub.temperament && (
-                    <div className="bg-paper border border-cotton rounded-xl p-5">
-                      <p className="font-mono text-[9px] text-gold/70 tracking-[0.2em] uppercase mb-3">
-                        Temperament
-                      </p>
-                      <p className="text-[13px] text-ink/65 leading-relaxed">{sub.temperament}</p>
-                    </div>
-                  )}
-                  {sub.care && (
-                    <div className="bg-paper border border-cotton rounded-xl p-5">
-                      <p className="font-mono text-[9px] text-gold/70 tracking-[0.2em] uppercase mb-3">
-                        Care Notes
-                      </p>
-                      <p className="text-[13px] text-ink/65 leading-relaxed">{sub.care}</p>
-                    </div>
-                  )}
-                </div>
-              </>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {sub.temperament && (
+                  <div
+                    className="rounded-xl p-5 text-sm leading-relaxed"
+                    style={{ backgroundColor: animal.color + "18" }}
+                  >
+                    <p className="font-display font-semibold text-ink mb-2">🧠 Temperament</p>
+                    <p className="text-muted">{sub.temperament}</p>
+                  </div>
+                )}
+                {sub.care && (
+                  <div
+                    className="rounded-xl p-5 text-sm leading-relaxed"
+                    style={{ backgroundColor: animal.color + "18" }}
+                  >
+                    <p className="font-display font-semibold text-ink mb-2">🏠 Care Notes</p>
+                    <p className="text-muted">{sub.care}</p>
+                  </div>
+                )}
+              </div>
             )}
 
             {sub.funFact && (
-              <>
-                <div className="h-px bg-cotton" />
-                <blockquote className="border-l-2 border-gold pl-6">
-                  <p className="font-mono text-[9px] text-gold/70 tracking-[0.2em] uppercase mb-3">
-                    Did you know
-                  </p>
-                  <p className="font-display text-xl italic font-light text-ink leading-relaxed">
-                    {sub.funFact}
-                  </p>
-                </blockquote>
-              </>
+              <div
+                className="rounded-2xl p-6 border-2"
+                style={{ borderColor: animal.color, backgroundColor: animal.color + "10" }}
+              >
+                <p className="font-display font-semibold text-ink mb-2">✨ Fun Fact</p>
+                <p className="text-muted leading-relaxed">{sub.funFact}</p>
+              </div>
             )}
 
-            <div className="pt-2">
-              <Link
-                href={`/animals/${animal.slug}`}
-                className="font-mono text-[10px] tracking-widest uppercase text-ink/35 hover:text-sage transition-colors"
-              >
-                ← Back to {animal.name}
-              </Link>
-            </div>
+            <Link
+              href={`/animals/${animal.slug}`}
+              className="inline-flex items-center gap-1.5 text-sm font-bold text-muted hover:text-ink transition-colors"
+            >
+              ← Back to {animal.name}
+            </Link>
           </div>
 
           {/* Sidebar */}
           <aside>
-            <div className="sticky top-24 space-y-8">
+            <div className="sticky top-24 space-y-6">
               <div>
-                <p className="font-mono text-[9px] text-gold/70 tracking-[0.2em] uppercase mb-5">
-                  Resources
-                </p>
-                {sub.links.map((link) => (
-                  <LinkCard key={link.url} link={link} />
-                ))}
+                <h2 className="font-display text-xl font-semibold text-ink mb-3">Resources</h2>
+                <div className="space-y-2">
+                  {sub.links.map((link) => (
+                    <LinkCard key={link.url} link={link} accentColor={animal.color} />
+                  ))}
+                </div>
               </div>
 
               {animal.subcategories && animal.subcategories.length > 1 && (
                 <div>
-                  <p className="font-mono text-[9px] text-gold/70 tracking-[0.2em] uppercase mb-4">
-                    Other {animal.name} Breeds
-                  </p>
+                  <h3 className="font-display font-semibold text-ink mb-3">
+                    Other {animal.name} breeds
+                  </h3>
                   <ul className="space-y-2">
                     {animal.subcategories
                       .filter((s) => s.slug !== sub.slug)
@@ -152,9 +132,9 @@ export default async function SubcategoryPage({ params }: Props) {
                         <li key={s.slug}>
                           <Link
                             href={`/animals/${animal.slug}/${s.slug}`}
-                            className="text-sm text-ink/50 hover:text-sage transition-colors font-sans"
+                            className="text-sm text-muted hover:text-ink transition-colors font-semibold"
                           >
-                            {s.name}
+                            {s.name} →
                           </Link>
                         </li>
                       ))}

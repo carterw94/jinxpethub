@@ -27,113 +27,88 @@ export default async function AnimalPage({ params }: Props) {
 
   return (
     <>
-      {/* ── Hero ─────────────────────────────────────────── */}
-      <section className="bg-ink relative overflow-hidden">
-        {/* SIGNATURE ELEMENT: scientific name ghost watermark */}
-        <div
-          className="sci-name-ghost absolute -bottom-4 right-0 text-[clamp(3.5rem,11vw,8.5rem)] tracking-tight"
-          aria-hidden="true"
-        >
-          {animal.scientificName}
+      {/* ── Colorful hero ──────────────────────────────── */}
+      <section
+        className="py-20 text-center relative overflow-hidden"
+        style={{ backgroundColor: animal.color }}
+      >
+        {/* Big emoji — the hero */}
+        <div className="text-[6rem] sm:text-[8rem] leading-none mb-4 select-none" aria-hidden="true">
+          {animal.emoji}
         </div>
+        <h1 className="font-display text-4xl sm:text-5xl font-semibold text-white mb-2">
+          {animal.name}
+        </h1>
+        <p className="text-white/75 text-base max-w-md mx-auto px-5">
+          {animal.tagline}
+        </p>
 
-        <div className="relative max-w-6xl mx-auto px-5 sm:px-8 py-20">
-          {/* Breadcrumb */}
-          <nav className="font-mono text-[9px] tracking-[0.18em] uppercase text-linen/30 mb-8 flex items-center gap-2">
-            <Link href="/animals" className="hover:text-gold/70 transition-colors">Animals</Link>
-            <span>/</span>
-            <span className="text-linen/50">{animal.name}</span>
-          </nav>
-
-          {/* Name */}
-          <h1 className="font-display text-[clamp(3rem,9vw,6rem)] font-light italic text-linen leading-none mb-3">
-            {animal.name}
-          </h1>
-
-          {/* Scientific name as readable label */}
-          <p className="font-mono text-xs text-gold/50 italic tracking-wide mb-6">
-            {animal.scientificName}
-          </p>
-
-          <p className="font-sans text-linen/55 text-base leading-relaxed max-w-lg">
-            {animal.tagline}
-          </p>
-        </div>
+        {/* Breadcrumb */}
+        <nav className="mt-6 flex items-center justify-center gap-1.5 text-white/50 text-xs font-semibold">
+          <Link href="/animals" className="hover:text-white transition-colors">
+            Animals
+          </Link>
+          <span>/</span>
+          <span className="text-white/80">{animal.name}</span>
+        </nav>
       </section>
 
-      <div className="h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
-
       {/* ── Content ──────────────────────────────────────── */}
-      <div className="max-w-6xl mx-auto px-5 sm:px-8 py-14">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <div className="max-w-5xl mx-auto px-5 sm:px-8 py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
 
-          {/* Main column */}
-          <div className="lg:col-span-2 space-y-12">
-
-            {/* Overview */}
+          {/* Main */}
+          <div className="lg:col-span-2 space-y-10">
             <section>
-              <p className="font-mono text-[9px] text-gold/70 tracking-[0.2em] uppercase mb-4">Overview</p>
-              <p className="text-ink/75 leading-relaxed text-[15px]">{animal.description}</p>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-3">Overview</h2>
+              <p className="text-muted leading-relaxed">{animal.description}</p>
             </section>
 
-            {/* Divider */}
-            <div className="h-px bg-cotton" />
-
-            {/* History */}
             <section>
-              <p className="font-mono text-[9px] text-gold/70 tracking-[0.2em] uppercase mb-4">History</p>
-              <p className="text-ink/75 leading-relaxed text-[15px]">{animal.history}</p>
+              <h2 className="font-display text-2xl font-semibold text-ink mb-3">History</h2>
+              <p className="text-muted leading-relaxed">{animal.history}</p>
             </section>
 
-            {/* Care */}
             {animal.care && (
-              <>
-                <div className="h-px bg-cotton" />
-                <section>
-                  <p className="font-mono text-[9px] text-gold/70 tracking-[0.2em] uppercase mb-4">Care Summary</p>
-                  <div className="bg-ink text-linen/75 rounded-xl p-6 text-[14px] leading-relaxed border border-ink-light">
-                    {animal.care}
-                  </div>
-                </section>
-              </>
+              <section>
+                <h2 className="font-display text-2xl font-semibold text-ink mb-3">Care</h2>
+                <div
+                  className="rounded-2xl p-5 text-sm leading-relaxed text-ink/80"
+                  style={{ backgroundColor: animal.color + "18" }}
+                >
+                  {animal.care}
+                </div>
+              </section>
             )}
 
-            {/* Breeds/types */}
             {animal.subcategories && animal.subcategories.length > 0 && (
-              <>
-                <div className="h-px bg-cotton" />
-                <section>
-                  <p className="font-mono text-[9px] text-gold/70 tracking-[0.2em] uppercase mb-2">
-                    Breeds & Types
-                  </p>
-                  <p className="text-sm text-ink/40 font-sans mb-6">
-                    Select a card to dive deeper.
-                  </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    {animal.subcategories.map((sub, i) => (
-                      <SubcategoryCard
-                        key={sub.id}
-                        subcategory={sub}
-                        animalSlug={animal.slug}
-                        accentColor={animal.color}
-                        index={i}
-                      />
-                    ))}
-                  </div>
-                </section>
-              </>
+              <section>
+                <h2 className="font-display text-2xl font-semibold text-ink mb-2">
+                  Breeds & Types
+                </h2>
+                <p className="text-sm text-muted mb-5">Tap any card to learn more.</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {animal.subcategories.map((sub, i) => (
+                    <SubcategoryCard
+                      key={sub.id}
+                      subcategory={sub}
+                      animalSlug={animal.slug}
+                      accentColor={animal.color}
+                      index={i}
+                    />
+                  ))}
+                </div>
+              </section>
             )}
           </div>
 
           {/* Sidebar */}
           <aside>
             <div className="sticky top-24">
-              <p className="font-mono text-[9px] text-gold/70 tracking-[0.2em] uppercase mb-5">
-                Helpful Resources
-              </p>
-              <div>
+              <h2 className="font-display text-xl font-semibold text-ink mb-4">Resources</h2>
+              <div className="space-y-2">
                 {animal.links.map((link) => (
-                  <LinkCard key={link.url} link={link} />
+                  <LinkCard key={link.url} link={link} accentColor={animal.color} />
                 ))}
               </div>
             </div>

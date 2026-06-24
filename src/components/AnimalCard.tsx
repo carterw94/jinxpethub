@@ -6,52 +6,42 @@ interface Props {
   index?: number
 }
 
-export default function AnimalCard({ animal, index = 0 }: Props) {
+export default function AnimalCard({ animal }: Props) {
   return (
     <Link href={`/animals/${animal.slug}`} className="group block">
-      <article
-        className="card-hover relative overflow-hidden rounded-xl bg-paper border border-cotton h-full"
-        style={{ animationDelay: `${index * 70}ms` }}
-      >
-        {/* Big emoji watermark */}
+      <article className="card-lift rounded-2xl overflow-hidden bg-white border border-border h-full">
+        {/* Colored top block */}
         <div
-          className="absolute bottom-0 right-0 text-[120px] leading-none opacity-[0.07] translate-x-4 translate-y-4 select-none pointer-events-none group-hover:opacity-[0.11] transition-opacity"
-          aria-hidden="true"
+          className="h-40 flex items-center justify-center relative overflow-hidden"
+          style={{ backgroundColor: animal.color }}
         >
-          {animal.emoji}
+          <span
+            className="text-7xl select-none group-hover:scale-110 transition-transform duration-300"
+            aria-hidden="true"
+          >
+            {animal.emoji}
+          </span>
         </div>
 
-        <div className="relative p-6 flex flex-col h-full">
-          {/* Top: label */}
-          <span className="font-mono text-[10px] tracking-[0.18em] text-ink/30 uppercase mb-5 block">
-            Companion Animal
-          </span>
-
-          {/* Name */}
-          <h3 className="font-display text-3xl font-semibold text-ink mb-1 leading-tight group-hover:text-sage transition-colors">
+        {/* Content */}
+        <div className="p-5">
+          <h3 className="font-display text-2xl font-semibold text-ink mb-1 group-hover:text-[#7C5CFC] transition-colors">
             {animal.name}
           </h3>
-
-          {/* Scientific name */}
-          <p className="font-mono text-[11px] text-earth/70 italic mb-4">
-            {animal.scientificName}
-          </p>
-
-          {/* Tagline */}
-          <p className="text-sm text-ink/60 leading-relaxed mb-6">
-            {animal.tagline}
-          </p>
-
-          {/* Bottom row */}
-          <div className="mt-auto flex items-center justify-between">
+          <p className="text-sm text-muted leading-relaxed mb-4">{animal.tagline}</p>
+          <div className="flex items-center justify-between">
             {animal.subcategories ? (
-              <span className="font-mono text-[10px] text-ink/35 tracking-wide">
+              <span
+                className="text-xs font-semibold px-2.5 py-1 rounded-full"
+                style={{ backgroundColor: animal.color + "22", color: animal.color }}
+              >
                 {animal.subcategories.length} breeds
               </span>
-            ) : (
-              <span />
-            )}
-            <span className="text-sage text-sm font-medium group-hover:translate-x-1 transition-transform inline-block">
+            ) : <span />}
+            <span
+              className="text-sm font-bold group-hover:translate-x-1 transition-transform inline-block"
+              style={{ color: animal.color }}
+            >
               →
             </span>
           </div>

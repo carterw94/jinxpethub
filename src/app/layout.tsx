@@ -1,28 +1,20 @@
 import type { Metadata } from "next"
-import { Cormorant_Garamond, DM_Sans, Space_Mono } from "next/font/google"
+import { Fredoka, Nunito } from "next/font/google"
 import "./globals.css"
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
 
-const cormorant = Cormorant_Garamond({
+const fredoka = Fredoka({
   subsets: ["latin"],
   display: "swap",
   weight: ["300", "400", "500", "600", "700"],
-  style: ["normal", "italic"],
-  variable: "--font-cormorant",
+  variable: "--font-fredoka",
 })
 
-const dmSans = DM_Sans({
+const nunito = Nunito({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-dm-sans",
-})
-
-const spaceMono = Space_Mono({
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["400", "700"],
-  variable: "--font-space-mono",
+  variable: "--font-nunito",
 })
 
 export const metadata: Metadata = {
@@ -31,17 +23,14 @@ export const metadata: Metadata = {
     template: "%s | Jinx Pet Hub",
   },
   description:
-    "Your friendly guide to cats, hamsters, guinea pigs, and rabbits. Learn about breeds, care, and history — plus follow Jinx the hamster on our blog.",
+    "Your friendly guide to cats, hamsters, guinea pigs, and rabbits. Breeds, care guides, and the adventures of Jinx the hamster.",
   metadataBase: new URL("https://jinxpethub.wiki"),
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang="en"
-      className={`${cormorant.variable} ${dmSans.variable} ${spaceMono.variable} h-full`}
-    >
-      <body className="font-sans antialiased min-h-full flex flex-col">
+    <html lang="en" className={`${fredoka.variable} ${nunito.variable} h-full`}>
+      <body className="font-sans antialiased min-h-full flex flex-col bg-white text-ink">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

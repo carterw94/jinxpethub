@@ -8,27 +8,26 @@ interface Props {
   index?: number
 }
 
-export default function SubcategoryCard({ subcategory, animalSlug, accentColor, index = 0 }: Props) {
+export default function SubcategoryCard({ subcategory, animalSlug, accentColor }: Props) {
   return (
     <Link href={`/animals/${animalSlug}/${subcategory.slug}`} className="group block">
-      <article
-        className="card-hover rounded-lg bg-paper border border-cotton p-5"
-        style={{ animationDelay: `${index * 50}ms` }}
-      >
-        {/* Colored top bar */}
+      <article className="card-lift rounded-xl bg-white border border-border p-5 h-full">
+        {/* Colored top accent bar */}
         <div
-          className="h-0.5 w-8 rounded-full mb-4 group-hover:w-full transition-all duration-300"
+          className="h-1 w-10 rounded-full mb-4 group-hover:w-16 transition-all duration-300"
           style={{ backgroundColor: accentColor }}
           aria-hidden="true"
         />
-
-        <h3 className="font-display text-xl font-semibold text-ink mb-2 leading-tight group-hover:text-sage transition-colors">
+        <h3 className="font-display text-lg font-semibold text-ink mb-2 group-hover:text-[#7C5CFC] transition-colors">
           {subcategory.name}
         </h3>
-        <p className="text-[13px] text-ink/55 leading-relaxed line-clamp-2">
+        <p className="text-sm text-muted leading-relaxed line-clamp-2">
           {subcategory.description.split(".")[0]}.
         </p>
-        <p className="mt-3 font-mono text-[10px] text-sage/70 tracking-wide">
+        <p
+          className="mt-3 text-xs font-bold"
+          style={{ color: accentColor }}
+        >
           Learn more →
         </p>
       </article>
