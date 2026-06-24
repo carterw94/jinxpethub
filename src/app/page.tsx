@@ -27,7 +27,7 @@ export default function HomePage() {
         </div>
 
         <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-semibold text-ink leading-tight mb-5">
-          Small animals,{" "}
+          Jinx{" "}
           <span
             className="inline-block"
             style={{
@@ -37,13 +37,12 @@ export default function HomePage() {
               backgroundClip: "text",
             }}
           >
-            big world.
+            Pet Hub
           </span>
         </h1>
 
         <p className="text-lg text-muted max-w-xl mx-auto leading-relaxed mb-8">
-          Breed guides, care tips, and history for cats, hamsters, guinea pigs, and rabbits —
-          plus the everyday adventures of Jinx.
+          A sancuary for pet lovers.
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-3">

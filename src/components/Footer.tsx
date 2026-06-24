@@ -48,7 +48,7 @@ export default function Footer() {
         </div>
         <div className="pt-6 border-t border-border text-center">
           <p className="text-xs text-muted">
-            © {new Date().getFullYear()} Jinx Pet Hub · jinxpethub.wiki
+            © {new Date().getFullYear()} Jinx Pet Hub · jinxpethub.us
           </p>
         </div>
       </div>

@@ -9,7 +9,7 @@ interface Props {
 export default function AnimalCard({ animal }: Props) {
   return (
     <Link href={`/animals/${animal.slug}`} className="group block">
-      <article className="card-lift rounded-2xl overflow-hidden bg-white border border-border h-full">
+      <article className="card-lift rounded-2xl overflow-hidden bg-white border border-border h-full flex flex-col">
         {/* Colored top block */}
         <div
           className="h-40 flex items-center justify-center relative overflow-hidden"
@@ -24,12 +24,12 @@ export default function AnimalCard({ animal }: Props) {
         </div>
 
         {/* Content */}
-        <div className="p-5">
+        <div className="p-5 flex flex-col flex-1">
           <h3 className="font-display text-2xl font-semibold text-ink mb-1 group-hover:text-[#7C5CFC] transition-colors">
             {animal.name}
           </h3>
-          <p className="text-sm text-muted leading-relaxed mb-4">{animal.tagline}</p>
-          <div className="flex items-center justify-between">
+          <p className="text-sm text-muted leading-relaxed mb-4 flex-1">{animal.tagline}</p>
+          <div className="flex items-center justify-between mt-auto">
             {animal.subcategories ? (
               <span
                 className="text-xs font-semibold px-2.5 py-1 rounded-full"
