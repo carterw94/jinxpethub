@@ -27,7 +27,7 @@ export default function BlogCard({ post, index = 0 }: { post: BlogPost; index?: 
   return (
     <Link href={`/blog/${post.slug}`} className="group block">
       <article
-        className="card-lift rounded-2xl overflow-hidden bg-white border border-border h-full flex flex-col"
+        className="card-lift rounded-2xl overflow-hidden bg-canvas border border-border h-full flex flex-col"
         style={{ animationDelay: `${index * 60}ms` }}
       >
         {/* Image */}

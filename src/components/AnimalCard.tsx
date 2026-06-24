@@ -9,7 +9,7 @@ interface Props {
 export default function AnimalCard({ animal }: Props) {
   return (
     <Link href={`/animals/${animal.slug}`} className="group block">
-      <article className="card-lift rounded-2xl overflow-hidden bg-white border border-border h-full flex flex-col">
+      <article className="card-lift rounded-2xl overflow-hidden bg-canvas border border-border h-full flex flex-col">
         {/* Colored top block */}
         <div
           className="h-40 flex items-center justify-center relative overflow-hidden"

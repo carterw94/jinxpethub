@@ -11,7 +11,7 @@ interface Props {
 export default function SubcategoryCard({ subcategory, animalSlug, accentColor }: Props) {
   return (
     <Link href={`/animals/${animalSlug}/${subcategory.slug}`} className="group block">
-      <article className="card-lift rounded-xl bg-white border border-border p-5 h-full">
+      <article className="card-lift rounded-xl bg-canvas border border-border p-5 h-full">
         {/* Colored top accent bar */}
         <div
           className="h-1 w-10 rounded-full mb-4 group-hover:w-16 transition-all duration-300"

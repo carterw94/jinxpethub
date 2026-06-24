@@ -12,7 +12,7 @@ export default function Footer() {
               <span className="font-display text-lg font-semibold text-ink">Jinx Pet Hub</span>
             </div>
             <p className="text-sm text-muted leading-relaxed">
-              Education and care for small animals, with a personal touch from Jinx.
+              Education and care for small animals.
             </p>
           </div>
           <div>

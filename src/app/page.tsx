@@ -48,7 +48,7 @@ export default function HomePage() {
         <div className="flex flex-wrap items-center justify-center gap-3">
           <Link
             href="/animals"
-            className="bg-ink text-white font-bold px-6 py-3 rounded-full hover:bg-ink/80 transition-colors text-sm"
+            className="bg-surface text-ink font-bold px-6 py-3 rounded-full hover:bg-border transition-colors text-sm"
           >
             Explore Animals →
           </Link>
@@ -103,7 +103,7 @@ export default function HomePage() {
           ].map(({ emoji, color, title, body }) => (
             <div
               key={title}
-              className="rounded-2xl border border-border p-6 bg-white"
+              className="rounded-2xl border border-border p-6 bg-canvas"
             >
               <div
                 className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-4"

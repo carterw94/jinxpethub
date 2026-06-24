@@ -145,15 +145,13 @@ export default async function SubcategoryPage({ params }: Props) {
 
               {/* Photo(s) */}
               {sub.image && (
-                <div className="space-y-3">
-                  <div className="relative h-48 rounded-2xl overflow-hidden">
-                    <Image
-                      src={sub.image}
-                      alt={sub.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
+                <div className="relative h-48 rounded-2xl overflow-hidden border-2 border-border">
+                  <Image
+                    src={sub.image}
+                    alt={sub.name}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               )}
             </div>
