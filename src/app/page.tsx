@@ -42,7 +42,7 @@ export default function HomePage() {
         </h1>
 
         <p className="text-lg text-muted max-w-xl mx-auto leading-relaxed mb-8">
-          A sancuary for pet lovers.
+          A sactuary for pet lovers.
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-3">

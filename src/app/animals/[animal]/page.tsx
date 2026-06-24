@@ -4,6 +4,7 @@ import Link from "next/link"
 import { animals, getAnimal } from "@/data/animals"
 import SubcategoryCard from "@/components/SubcategoryCard"
 import LinkCard from "@/components/LinkCard"
+import AnimalPhoto from "@/components/AnimalPhoto"
 
 interface Props {
   params: Promise<{ animal: string }>
@@ -32,19 +33,28 @@ export default async function AnimalPage({ params }: Props) {
         className="py-20 text-center relative overflow-hidden"
         style={{ backgroundColor: animal.color }}
       >
+        {/* Background photo */}
+        {animal.image && (
+          <AnimalPhoto
+            src={animal.image}
+            alt={animal.name}
+            className="object-cover opacity-20"
+            priority
+          />
+        )}
         {/* Big emoji — the hero */}
-        <div className="text-[6rem] sm:text-[8rem] leading-none mb-4 select-none" aria-hidden="true">
+        <div className="relative z-10 text-[6rem] sm:text-[8rem] leading-none mb-4 select-none" aria-hidden="true">
           {animal.emoji}
         </div>
-        <h1 className="font-display text-4xl sm:text-5xl font-semibold text-white mb-2">
+        <h1 className="relative z-10 font-display text-4xl sm:text-5xl font-semibold text-white mb-2">
           {animal.name}
         </h1>
-        <p className="text-white/75 text-base max-w-md mx-auto px-5">
+        <p className="relative z-10 text-white/75 text-base max-w-md mx-auto px-5">
           {animal.tagline}
         </p>
 
         {/* Breadcrumb */}
-        <nav className="mt-6 flex items-center justify-center gap-1.5 text-white/50 text-xs font-semibold">
+        <nav className="relative z-10 mt-6 flex items-center justify-center gap-1.5 text-white/50 text-xs font-semibold">
           <Link href="/animals" className="hover:text-white transition-colors">
             Animals
           </Link>

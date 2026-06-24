@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Animal } from "@/types"
+import AnimalPhoto from "./AnimalPhoto"
 
 interface Props {
   animal: Animal
@@ -10,13 +11,26 @@ export default function AnimalCard({ animal }: Props) {
   return (
     <Link href={`/animals/${animal.slug}`} className="group block">
       <article className="card-lift rounded-2xl overflow-hidden bg-white border border-border h-full flex flex-col">
-        {/* Colored top block */}
+        {/* Photo + colored overlay */}
         <div
-          className="h-40 flex items-center justify-center relative overflow-hidden"
+          className="h-44 relative overflow-hidden"
           style={{ backgroundColor: animal.color }}
         >
+          {animal.image && (
+            <AnimalPhoto
+              src={animal.image}
+              alt={animal.name}
+              className="object-cover"
+            />
+          )}
+          {/* Color overlay so the emoji is always readable */}
+          <div
+            className="absolute inset-0"
+            style={{ backgroundColor: animal.color + "88" }}
+            aria-hidden="true"
+          />
           <span
-            className="text-7xl select-none group-hover:scale-110 transition-transform duration-300"
+            className="absolute inset-0 flex items-center justify-center text-7xl select-none drop-shadow-md group-hover:scale-110 transition-transform duration-300"
             aria-hidden="true"
           >
             {animal.emoji}
