@@ -48,7 +48,7 @@ export const animals: Animal[] = [
           "Persians originated in Persia (modern-day Iran) and were brought to Europe in the 1600s by Italian nobleman Pietro della Valle. They became enormously popular among Victorian-era aristocracy and have been a fixture of cat shows since the very first in London in 1871.",
         temperament: "Calm, gentle, quiet, devoted to their families. Prefers a peaceful home.",
         care: "Daily grooming is essential to prevent matting. Regular eye cleaning is needed due to their flat face structure. They are indoor-only cats.",
-        image: "https://images.unsplash.com/photo-1568152950566-c1bf43f4ab28?auto=format&fit=crop&w=800&q=80",
+        image: "/images/animals/persian.jpg",
         funFact: "Persians rarely meow and tend to communicate through soft chirps and eye contact.",
         links: [
           {
@@ -73,7 +73,7 @@ export const animals: Animal[] = [
           "Native to the state of Maine, the Maine Coon is one of the oldest natural cat breeds in North America. They likely descended from long-haired cats brought by early sailors. They were popular farm cats before becoming one of the first breeds shown at cat shows in the US in the 1860s.",
         temperament: "Playful, affectionate, sociable with dogs and children. Often called 'dog-like.'",
         care: "Weekly brushing to prevent tangles. They love water and interactive play. Prone to hip dysplasia and HCM — regular cardiac screenings recommended.",
-        image: "https://images.unsplash.com/photo-1583083527882-4bee9aba2bfb?auto=format&fit=crop&w=800&q=80",
+        image: "/images/animals/mainecoon.jpg",
         funFact: "Maine Coons often chirp and trill instead of meowing, especially when excited.",
         links: [
           {
@@ -98,7 +98,7 @@ export const animals: Animal[] = [
           "One of the oldest and most recognized cat breeds, Siamese cats originated in Thailand (formerly Siam) where they were kept by royalty. They arrived in the West in the late 1800s, with the first documented Siamese appearing at Crystal Palace Cat Show in London in 1871.",
         temperament: "Highly vocal, social, demanding, intelligent. Not ideal for owners who are away often.",
         care: "Very low-maintenance coat. High social and mental stimulation needs — does best with a companion cat. Prone to dental and respiratory issues.",
-        image: "https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?auto=format&fit=crop&w=800&q=80",
+        image: "/images/animals/siamese.jpg",
         funFact: "A Siamese kitten is born entirely white; the color-point markings develop within the first few weeks of life.",
         links: [
           {
@@ -123,7 +123,7 @@ export const animals: Animal[] = [
           "Descended from domestic cats brought to Britain by the Romans, British Shorthairs are one of the oldest pedigree cat breeds. They were among the first cats exhibited at the 1871 Crystal Palace Cat Show, though the breed nearly went extinct after World War II and was revived by crossing with Persians.",
         temperament: "Calm, undemanding, affectionate but not clingy. Good with children and other pets.",
         care: "Twice-weekly brushing to manage shedding. Prone to obesity — monitor diet carefully. Generally a very healthy and low-maintenance breed.",
-        image: "https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&w=800&q=80",
+        image: "/images/animals/britishshorthair.jpg",
         funFact: "The British Shorthair is believed to be the inspiration for the Cheshire Cat in Alice in Wonderland.",
         links: [
           {
@@ -148,7 +148,7 @@ export const animals: Animal[] = [
           "Bengals are a relatively modern breed, created in the 1960s and 70s by breeding domestic cats with Asian Leopard Cats. Geneticist Jean Mill developed the Bengal breed to create a wild-looking cat with a gentle domestic temperament. They were officially recognized by TICA in 1983.",
         temperament: "Active, intelligent, playful, mischievous. Needs lots of enrichment and space.",
         care: "High exercise needs — leash walks and puzzle toys are a must. Short coat is easy to maintain. Prone to HCM; regular vet checks recommended.",
-        image: "https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?auto=format&fit=crop&w=800&q=80",
+        image: "/images/animals/bengal.jpg",
         funFact: "Bengals often love water and will happily splash in their water bowl or join you in the shower.",
         links: [
           {
@@ -173,7 +173,7 @@ export const animals: Animal[] = [
           "Ragdolls are a fairly modern breed, developed in the 1960s in California by breeder Ann Baker. The foundation cat was a white domestic longhair named Josephine, known for her calm temperament. Ragdolls were officially recognized by TICA in 1979.",
         temperament: "Extremely gentle, calm, follows owners room to room, tolerant with children.",
         care: "Semi-long coat needs twice-weekly brushing. Very indoor-suited and should not be left alone for long periods. Prone to HCM and bladder stones.",
-        image: "https://images.unsplash.com/photo-1571566882372-1598d88abd90?auto=format&fit=crop&w=800&q=80",
+        image: "/images/animals/ragdoll.jpg",
         funFact: "Ragdoll kittens are born white; their full color-point markings develop by about two years of age.",
         links: [
           {
@@ -232,7 +232,7 @@ export const animals: Animal[] = [
           "All domestic Syrian hamsters trace their lineage to a single wild litter captured in Syria in 1930 by zoologist Israel Aharoni. By the 1940s they had arrived in the US, and by the 1970s they were among the most popular small pets in the Western world.",
         temperament: "Solitary (must be housed alone), generally tame when handled regularly, active at dusk and night.",
         care: "Cage minimum: 40×20 inches. Wheel minimum: 10–11 inches. Deep bedding (6+ inches) for burrowing. Provide hides, tunnels, and chews.",
-        image: "https://images.unsplash.com/photo-1425082661705-1834bfd09dca?auto=format&fit=crop&w=800&q=80",
+        image: "/images/animals/syrian.jpg",
         funFact: "Syrian hamsters can carry up to half their body weight in food in their cheek pouches.",
         links: [
           {
@@ -257,7 +257,7 @@ export const animals: Animal[] = [
           "First described by zoologist W.C. Campbell in 1902 in the Tuva region of Russia. They were domesticated in the 1960s and arrived in the UK as pets in the 1970s. Today they are one of the most common dwarf hamster species kept as pets.",
         temperament: "Can be nippy when stressed, but generally curious and active. May be kept in pairs if bonded early.",
         care: "Cage minimum: 40×20 inches. Wheel minimum: 8 inches. They are social but introductions must be done carefully. Prone to diabetes — avoid sugary foods.",
-        image: "https://images.unsplash.com/photo-1425082661705-1834bfd09dca?auto=format&fit=crop&w=800&q=80",
+        image: "/images/animals/cambelldwarf.jpg",
         funFact: "Dwarf Campbells are so fast they can be difficult to photograph — they rarely hold still!",
         links: [
           {
@@ -277,7 +277,7 @@ export const animals: Animal[] = [
           "Native to the grasslands of Siberia and Kazakhstan, Winter Whites were first described scientifically in 1773. In the wild, they turn white in winter to camouflage against snow. They became popular pets in Europe starting in the 1980s.",
         temperament: "Slightly calmer than Campbells, curious, social. Can be kept in pairs if bonded early.",
         care: "Very similar care to Campbells. Also prone to diabetes. Seasonal coat changes may occur even in indoor pets under artificial light.",
-        image: "https://images.unsplash.com/photo-1425082661705-1834bfd09dca?auto=format&fit=crop&w=800&q=80",
+        image: "/images/animals/whitedwarf.jpg",
         funFact: "Winter Whites can turn almost completely white in winter — a trait triggered by shorter daylight hours.",
         links: [
           {
@@ -321,7 +321,7 @@ export const animals: Animal[] = [
     history:
       "Guinea pigs are native to the Andes Mountains of South America, where they were first domesticated by indigenous peoples around 5000 BCE as a food source. Spanish explorers brought them to Europe in the 16th century, where they quickly became fashionable exotic pets among the upper class. Today they are among the most popular small pets globally.",
     care: "Guinea pigs need large enclosures (minimum 7.5 sq ft for one, 10+ for two), unlimited grass hay (their primary diet), fresh vegetables daily, Vitamin C supplementation, and social companionship — they should never be housed alone.",
-    image: "https://images.unsplash.com/photo-1548767797-d8c844163c4a?auto=format&fit=crop&w=800&q=80",
+    image: "/images/animals/americangp.jpg",
     color: "#4DD9AC",
     links: [
       {
@@ -356,7 +356,7 @@ export const animals: Animal[] = [
           "The American (formerly English) is the oldest recognized breed of guinea pig, developed from the original South American cavies brought to Europe in the 1500s. It has been shown at exhibitions since the early 1900s and remains the most popular breed worldwide.",
         temperament: "Gentle, curious, social, and easy to handle. Great for children and first-time owners.",
         care: "Very low grooming needs — a quick brush once a week is enough. Provide spacious housing, a companion, and plenty of hay.",
-        image: "https://images.unsplash.com/photo-1548767797-d8c844163c4a?auto=format&fit=crop&w=800&q=80",
+        image: "/images/animals/americangp.jpg",
         funFact: "Guinea pigs 'popcorn' — leaping and twisting in the air — when they are extremely happy.",
         links: [
           {
@@ -376,7 +376,7 @@ export const animals: Animal[] = [
           "The Peruvian is one of the oldest long-haired guinea pig breeds, developed in South America and brought to France in the 19th century. They were shown at the first recorded guinea pig show in Europe in the 1880s and became popular in the US in the early 1900s.",
         temperament: "Curious and sociable, but high-maintenance due to coat requirements.",
         care: "Daily grooming is essential to prevent matting and tangles. Many owners keep the coat trimmed for practical care. Regular baths may be needed.",
-        image: "https://images.unsplash.com/photo-1548767797-d8c844163c4a?auto=format&fit=crop&w=800&q=80",
+        image: "/images/animals/peruvian.jpg",
         funFact: "A Peruvian's hair never stops growing — without trimming, it can completely cover their face.",
         links: [
           {
@@ -396,7 +396,7 @@ export const animals: Animal[] = [
           "Despite the name, Abyssinian guinea pigs did not originate in Ethiopia — the name was popular in Victorian Britain for exotic-sounding breeds. They are one of the oldest pedigree guinea pig breeds, recognized in the late 1800s. Show standards require a minimum of 8 rosettes placed symmetrically.",
         temperament: "Energetic, mischievous, and confident. More independent than other breeds but very entertaining.",
         care: "The rosette coat doesn't need as much grooming as long-haired breeds but benefits from occasional brushing to prevent debris buildup.",
-        image: "https://images.unsplash.com/photo-1548767797-d8c844163c4a?auto=format&fit=crop&w=800&q=80",
+        image: "/images/animals/abyssinian.jpg",
         funFact: "Show-standard Abyssinians must have at least 8 perfectly placed rosettes to be competitive.",
         links: [
           {
@@ -416,7 +416,7 @@ export const animals: Animal[] = [
           "The Teddy guinea pig was developed in the United States in the 1960s through a natural genetic mutation that affects the hair structure, causing the characteristic upright, dense coat. They were recognized by the American Cavy Breeders Association shortly after.",
         temperament: "Calm, friendly, and easy to handle. One of the most laid-back guinea pig breeds.",
         care: "The dense coat benefits from a stiff brush weekly. Their nasal passages can be prone to dryness — ensure good humidity in their environment.",
-        image: "https://images.unsplash.com/photo-1548767797-d8c844163c4a?auto=format&fit=crop&w=800&q=80",
+        image: "/images/animals/teddy.jpg",
         funFact: "Running your hand the wrong way across a Teddy's coat feels like petting velvet in reverse — surprisingly satisfying.",
         links: [
           {
